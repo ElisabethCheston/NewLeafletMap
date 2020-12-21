@@ -8,17 +8,18 @@
     <title>Document</title>
     <style>
         html, body, #map{
-    padding: 0;
-    margin: 0;
-    height: 100%;
-    width: 100%;
+            height: 100%;
+            width: 100vw;
+            padding: 0;
+            margin: 0;
 }
+
     </style>
 </head>
 <body>
     <div id="map"></div>
     <script>
-        var map = L.map('map').setView([61.00, 18.54], 4);
+        var map = L.map('map').setView([60.00, 26.54], 4);
 
         L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
 	attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
@@ -160,48 +161,13 @@
             ["SpotLevel", 57.9513802, 19.2555524, "id111", "SUDERSAND","Wind Direction: E/SE", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
             ["SpotLevel", 57.9868616, 19.3039213, "id111", "SKÄR","Wind Direction: N/NE/NW", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"]
     ];
-       // Loop for the kitespots. //
+       
+    // Loop for the kitespots. //
         for (var i = 0; i < kitespots.length; i++) {
-            spots = new L.marker([kitespots[i][1],kitespots[i][2]])
+            spots = new L.marker([kitespots[i][1],kitespots[i][2]]) 
                 .bindPopup("<b>" + kitespots[i][4] + "</b>" + "<br/>" + ({iconUrl:"https://fontawesome.com/icons/location-arrow?style=solid"}) + kitespots[i][5] + "<br/>" + kitespots[i][6] + "<br/>" + kitespots[i][7] + " " + kitespots[i][8])
                 .addTo(map);
         }
-
-   /*var leafletIcon = L.icon ({
-        iconUrl: "https://leafletjs.com/examples/custom-icons/leaf-green.png",
-        shadowUrl: "https://leafletjs.com/examples/custom-icons/leaf-shadow.png",
-        iconSize: [38, 95],
-        iconAnchor: [22, 94],
-        shadowAnchor: [4, 62],
-        popupAnchor: [12,-98]
-    })
-    */
-   /*
-   var LeafletIcon = L.Icon.extend({
-       options: {
-        shadowUrl: "https://leafletjs.com/examples/custom-icons/leaf-shadow.png",
-        iconSize: [38,95],
-        shadowSize: [50,64],
-        iconAnchor: [22, 94],
-        shadowAnchor: [4, 62],
-        popupAnchor: [-3,-76]
-       }
-   })
-   var  greenIcon = new LeafletIcon({iconUrl:"https://leafletjs.com/examples/custom-icons/leaf-green.png"}),
-        redIcon = new LeafletIcon({iconUrl:"https://leafletjs.com/examples/custom-icons/leaf-red.png"}),
-        orangeIcon = new LeafletIcon({iconUrl:"https://leafletjs.com/examples/custom-icons/leaf-orange.png"})
-
-var marker = L.marker([51.5, -0.08], {icon:greenIcon}).addTo(map);
-var marker = L.marker([51.5, -0.09], {icon:redIcon}).addTo(map);
-var marker = L.marker([51.5, -0.10], {icon:orangeIcon}).addTo(map);
-
-
-var marker = L.marker([51.5, -0.09],{icon:leafletIcon}).addTo(map);
-
-var circle = L.circle([51.5, -0.11]).addTo(map);
-
-marker.bindPopup("Hello").openPopup();
-*/
     </script>
             <script src="js/map.js"></script>
 </body>
