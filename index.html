@@ -1,33 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
-  <title>ArcGIS API for JavaScript Tutorials: Add layers to a map</title>
-  <link rel="stylesheet" href="https://js.arcgis.com/4.18/esri/themes/light/main.css">
-  <script src="https://js.arcgis.com/4.18/"></script>
-<title>Configure pop-ups</title>
-  <style>
-    html,
-    body,
-    #viewDiv {
-      padding: 0;
-      margin: 0;
-      height: 100%;
-      width: 100%;
-    }
-  </style>
-  <link rel="stylesheet" href="https://js.arcgis.com/4.18/esri/themes/light/main.css">  
-  <script src="https://js.arcgis.com/4.18/"></script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <title>Document</title>
+    <style>
+        html, body, #map{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+    </style>
 </head>
-
 <body>
-  <div id="viewDiv"></div>
-  
+    <div id="map"></div>
+    <script>
+        var map = L.map('map').setView([51.5, -0.09], 12);
 
-  <script src="/js/map.js"></script>
-  <script src="/css/map.css"></script>
+        L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=6FwgsDjvvVjh3cxmvyjh', {
+            attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>',
+    }).addTo(map);
+
+   /*var leafletIcon = L.icon ({
+        iconUrl: "https://leafletjs.com/examples/custom-icons/leaf-green.png",
+        shadowUrl: "https://leafletjs.com/examples/custom-icons/leaf-shadow.png",
+        iconSize: [38, 95],
+        iconAnchor: [22, 94],
+        shadowAnchor: [4, 62],
+        popupAnchor: [12,-98]
+    })
+    */
+   var LeafletIcon = L.Icon.extend({
+       options: {
+        shadowUrl: "https://leafletjs.com/examples/custom-icons/leaf-shadow.png",
+        iconSize: [38,95],
+        shadowSize: [50,64],
+        iconAnchor: [22, 94],
+        shadowAnchor: [4, 62],
+        popupAnchor: [-3,-76]
+       }
+   })
+   var  greenIcon = new LeafletIcon({iconUrl:"https://leafletjs.com/examples/custom-icons/leaf-green.png"}),
+        redIcon = new LeafletIcon({iconUrl:"https://leafletjs.com/examples/custom-icons/leaf-red.png"}),
+        orangeIcon = new LeafletIcon({iconUrl:"https://leafletjs.com/examples/custom-icons/leaf-orange.png"})
+
+var marker = L.marker([51.5, -0.08], {icon:greenIcon}).addTo(map);
+var marker = L.marker([51.5, -0.09], {icon:redIcon}).addTo(map);
+var marker = L.marker([51.5, -0.10], {icon:orangeIcon}).addTo(map);
+
+
+var marker = L.marker([51.5, -0.09],{icon:leafletIcon}).addTo(map);
+
+var circle = L.circle([51.5, -0.11]).addTo(map);
+
+marker.bindPopup("Hello").openPopup();
+
+    </script>
+            <script src="js/map.js"></script>
 </body>
-
-</html> 
+</html>
