@@ -7,11 +7,10 @@
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <title>Document</title>
     <style>
-        html, body, #map{
+        html, body, #map {
             height: 100%;
-            width: 100vw;
-            padding: 0;
-            margin: 0;
+            padding: 0px;
+            margin: 0px;
 }
 
     </style>
@@ -19,156 +18,1303 @@
 <body>
     <div id="map"></div>
     <script>
-        var map = L.map('map').setView([60.00, 26.54], 4);
+  
 
-        L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+        var map = L.map('map', {
+            zoomControl : false
+        }).setView([52.00, 26.54], 4);
+
+        L.tileLayer('https://api.maptiler.com/maps/topo/{z}/{x}/{y}.png?key=6FwgsDjvvVjh3cxmvyjh', {
 	attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
     }).addTo(map);
 
-             var kitespots = [
-        //Kalix//
-            ["SpotLevel", 65.8108770, 23.6116663, "id1", "BREVIKEN","Wind Direction: S/SW", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 65.8130515, 23.4892165, "id2", "BODÖN","Wind Direction: N/NW", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-        //Luleå//
-            ["SpotLevel", 65.6230793, 22.0222872, "id3", "STORSAND","Wind Direction: S/SW", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 65.5456349, 22.1564902, "id4", "LULVIKSBADET","Wind Direction: NW", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 65.5189811, 22.1522248, "id5", "LULHÄLLAN","Wind Direction: S/SW", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 65.4982979, 22.3689945, "id6", "KLUBBVIKEN","Wind Direction: S", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-        //Skellefteå//
-            ["SpotLevel", 64.7742422, 21.1834173, "id7", "STORSNÄCK","Wind Direction: N/NW", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 64.7408877, 21.2183383, "id8", "SILLSKATAN","Wind Direction: S/SW", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 64.5184790, 21.5452258, "id9", "VÅNÖREN","Wind Direction: S/SW", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 64.4348443, 21.6102720, "id10", "BJURÖKLUBB EAST","Wind Direction: SE", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 64.4362105, 21.5805984, "id11", "BJURÖKLUBB WEST","Wind Direction: SW", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-        //Umeå//
-            ["SpotLevel", 63.6678316, 20.0246587, "id12", "LILLIS","Wind Direction:  S/SE", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 63.6504034, 19.9964010, "id13", "LÄNKEBO","Wind Direction:  NE/E", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 63.4897141, 19.4738929, "id14", "STORÄNGET","Wind Direction:  N/NE", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 63.4573565, 19.2647473, "id15", "SALUSAND","Wind Direction:  SW", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-        //Örnsköldsvik//
-            ["SpotLevel", 62.9903104, 18.5276622, "id16", "STORSANDEN","Wind Direction: N/NE/NW", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 63.2505607, 18.6855082, "id17", "NYÄNGET","Wind Direction: S/SE", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 63.2150045, 18.8268965, "id18", "GULLVIK","Wind Direction: S", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 63.2067795, 18.8098370, "id19", "VANNVIKEN","Wind Direction: S/SE", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 63.2206414, 18.9595582, "id20", "STUBBSAND","Wind Direction: S/SW", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-        //Härnösand//
-            ["SpotLevel", 62.5759766, 17.9129405, "id21", "SMITINGE","Wind Direction: S/SE", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 62.5990367, 18.0325180, "id22", "SVARTVIK","Wind Direction: S/SE", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 62.5847226, 17.9239516, "id23", "YTTREFÄLLE","Wind Direction: S/SE", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 62.6448072, 17.9683284, "id24", "SÄLSTEN","Wind Direction: NE/NW", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-        //Sundsvall/
-            ["SpotLevel", 62.4511973, 17.5340607, "id25", "MYCKELÄNG","Wind Direction: NV", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 62.4490114, 17.5004908, "id26", "STORNÄSET","Wind Direction: S", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 62.5095594, 17.4745280, "id27", "SMACKEN","Wind Direction: S/SW", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 62.5102920, 17.4833562, "id28", "GULLFIBER","Wind Direction: S/SW", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 62.0768640, 17.4581468, "id29", "DYRÅSAND","Wind Direction: E", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 62.0268011, 17.4232861, "id30", "SÖRFJÄRDEN","Wind Direction: S/SE", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 62.0181316, 17.4144492, "id31", "VARPSAND","Wind Direction: NE", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 61.9938701, 17.3965579, "id32", "HÅRTE","Wind Direction: S/SE", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 61.9201011, 16.7183359, "id33", "FÖNEBO","Wind Direction: S/SE", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 61.8149679, 16.8746091, "id34", "HALLSBO","Wind Direction: NE", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-        //Hudiksvall//
-            ["SpotLevel", 61.7184406, 17.1726866, "id35", "MALNBADET","Wind Direction: S/SW", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 61.7011666, 17.5090105, "id36", "SÖRSUNDET","Wind Direction: N/NE", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 61.6215421, 17.4670460, "id37", "TÅNGVIK","Wind Direction: S/SE", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 61.6224418, 17.4454898, "id38", "HÖLICK SOUTH","Wind Direction: S/SE", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 61.6297878, 17.4326722, "id39", "HÖLICK WEST","Wind Direction: S/SW", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-        //Söderhamn//
-            ["SpotLevel", 61.4187314, 17.1798377, "id40", "SNÄCKEN","Wind Direction: S/SE", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 61.4169583, 17.1525610, "id41", "KRÅKNÄS","Wind Direction: S/SW", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 61.2468373, 17.1947394, "id42", "STENÖ HAVSBAD","Wind Direction: S/SE", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 61.2406976, 17.2613011, "id43", "ORSUNDET","Wind Direction: S/SW", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 61.2352256, 17.2766953, "id44", "ENSKÄR","Wind Direction: S/SE", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-        //Gävle//
-            ["SpotLevel", 60.7524944, 17.3534575, "id45", "UTVALNÄS UDDE","Wind Direction: E/SE", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 60.7319714, 17.3182666, "id46", "HOLMUDDEN","Wind Direction: E", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 60.7154601, 17.2624873, "id47", "BRÄDVIKEN","Wind Direction: S/SE", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 60.6463792, 17.4264364, "id48", "KLÄCKEN","Wind Direction: N", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 60.6414841, 17.4734790, "id49", "RULLSAND","Wind Direction: N/NE", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-        //Åland//
-            ["SpotLevel", 60.2174413, 19.5438690, "id50", "SANDMO","Wind Direction: W/SW", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 60.1539131, 19.5973999, "id51", "HOLMUDDEN","Wind Direction: E", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 60.1105197, 19.9479629, "id52", "SKJULET","Wind Direction: S/SE", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 60.0894388, 20.1402891, "id53", "LUMPARN","Wind Direction: N/NW/NE", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 60.2073874, 20.2499844, "id54", "PRÄSTÖ","Wind Direction: S/SW", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-        //Stockholm North//
-            ["SpotLevel", 59.9054138, 18.9926251, "id55", "SALNÖ","Wind Direction: N/NE", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 59.7171248, 19.0650978, "id56", "KAPELLSKÄR","Wind Direction: S/SE", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 59.6283077, 18.9845648, "id57", "BROMSKÄR","Wind Direction: E/NE", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 59.3769370, 18.2315604, "id58", "FÅGELÖUDDEN","Wind Direction: N/NW", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 59.4258797, 18.1050031, "id59", "NÄSÄNG S","Wind Direction: S/SE", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 59.4421925, 18.1312813, "id60", "HÄGERNÄSBADET","Wind Direction: S/SE", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 59.3897778, 18.1116807, "id61", "STICKLINGE","Wind Direction: N/NE", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-        // Stockholm South//
-            ["SpotLevel", 59.2871791, 17.8915723, "id62", "SÄTRASTRAND","Wind Direction: W", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 59.2204036, 18.5375894, "id63", "BJÖRKVIK","Wind Direction: S/SE", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 59.2175396, 18.5288400, "id64", "LILLA SAND","Wind Direction: S/SE'", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 59.2212215, 18.5501964, "id65", "TORPESAND","Wind Direction: S/SEW", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 59.2224023, 18.4801033, "id66", "GRÖNSKAN","Wind Direction: S/SE", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 59.2283717, 18.3567438, "id67", "TRINNTORP","Wind Direction: N/NE", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 59.1964566, 18.4173426, "id68", "SANDHOLMEN","Wind Direction: S/SE", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 59.2690874, 18.2649998, "id69", "ERSTAVIK","Wind Direction: SE", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 59.3145342, 18.3051525, "id70", "MJÖLKUDDEN","Wind Direction: SE", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 59.1373975, 18.3978376, "id71", "DALARÖ","Wind Direction: S/SW", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 59.0972660, 18.3228420, "id72", "GÅLÖ","Wind Direction: SE", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 58.8043955, 17.7977476, "id73", "ÖRUDDEN N","Wind Direction: W/NW", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 58.7966607, 17.7912915, "id74", "ÖRUDDEN V","Wind Direction: S/SW", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 58.7988784, 17.8109458, "id75", "ÖRUDDEN S","Wind Direction: S/S", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 58.7226834, 17.1059486, "id76", "VACCUM","Wind Direction: S/SW", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-        // Gotland EASTCOST //
-            ["SpotLevel", 57.6731890, 18.3313751, "id77", "SNÄCK","Wind Direction: S/SW", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 57.6537283, 18.3039127, "id78", "NORDERSTRAND","Wind Direction: S/SW", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 57.6000832, 18.2128064, "id79", "FRIDHEM","Wind Direction: S/SW", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 57.5010071, 18.1130306, "id80", "GNISVÄRD","Wind Direction: S/SW", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 57.4912072, 18.1260356, "id81", "TOFTA","Wind Direction: S/SW", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 57.4836655, 18.1258006, "id82", "TOFTA S","Wind Direction: S/SW", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 57.4366947, 18.1419227, "id83", "VÄSTERGARN N","Wind Direction: S/SW", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 57.8043955, 18.7977476, "id84", "VÄSTERGARN S","Wind Direction: S/SE", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 57.4056765, 18.1546933, "id85", "KOVIK","Wind Direction: S/SW", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 57.3967423, 18.1640881, "id86", "TJURUDDEN","Wind Direction: S/W", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-        // Gotland SOUTH //
-            ["SpotLevel", 57.1316122, 18.2168770, "id87", "NISSEVIKEN","Wind Direction: S/SW", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 56.9286604, 18.2373114, "id88", "VALAR","Wind Direction: S/SW", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 57.7988784, 18.2784944, "id89", "HOLMHÄLLAR","Wind Direction: S/SW", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 56.9961371, 18.3442752, "id90", "FALUDDEN S","Wind Direction: S/SE", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 57.7988784, 18.8109458, "id91", "FALUDDEN N","Wind Direction: E/NE", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 57.1241931, 18.43118507, "id92", "GANSVIK","Wind Direction: E/NE", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-        // Gotland WESTCOST //
-            ["SpotLevel", 57.2839580, 18.6672809, "id93", "LAUSVIKEN","Wind Direction: N/NE", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 57.3331318, 18.7144050, "id94", "LJUGARN","Wind Direction: E", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 57.3712321, 18.7797047, "id95", "ARDREVIKEN","Wind Direction: E/SE", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 57.3740297, 18.7966770, "id96", "SJAUSTRU","Wind Direction: S/SE", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 57.3964000, 18.8540002, "id97", "JRP","Wind Direction: S/SE", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 57.3988506, 18.8673187, "id98", "VÄSTVIKEN","Wind Direction: S/SE", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 57.3956900, 18.8796854, "id99", "SANDVIKEN","Wind Direction: S/SW", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 57.4030865, 18.9181516, "id100", "NATVIKSUDDEN","Wind Direction: E/NE/SE", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 57.4379699, 18.8993677, "id101", "GROGARN","Wind Direction: N/NE", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 57.4349801, 18.8549507, "id102", "KATTVIK","Wind Direction: N/NW/NE", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 57.6143897, 18.7676287, "id103", "ÅMINNE","Wind Direction: N/NE", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            // Gotland NORTH //
-            ["SpotLevel", 57.7177726, 18.8093575, "id104", "SLITE","Wind Direction: E/SE/NE", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 57.7344558, 18.8781290, "id105", "HIDEVIKEB","Wind Direction: S/SE", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 57.7204868, 18.9115332, "id106", "ST OLOFHOLM","Wind Direction: E/SE/NE", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 57.7886030, 18.9515102, "id107", "SJÖKROGEN","Wind Direction: SE", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 57.7542217, 18.0093393, "id108", "FURILLEN","Wind Direction: W/SW", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 57.9295233, 18.8955352, "id109", "SAXRIV","Wind Direction: W/NW", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 57.8437760, 18.7848341, "id110", "BRÄGÅRN","Wind Direction: NW", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 57.8455552, 18.6083233, "id111", "IREVIKEN","Wind Direction: W/NW", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            // FÅRÖ //
-            ["SpotLevel", 57.9735893, 19.2501460, "id108", "EKEVIKEN","Wind Direction: N/NW", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 57.9868174, 19.2241011, "id109", "VARPET","Wind Direction: N/NE", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 57.9561473, 19.3311783, "id110", "SKALASAND","Wind Direction: E/SE", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 57.9513802, 19.2555524, "id111", "SUDERSAND","Wind Direction: E/SE", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"],
-            ["SpotLevel", 57.9868616, 19.3039213, "id111", "SKÄR","Wind Direction: N/NE/NW", "Description:", "Parking 2 min from beach. Launching area good. Grasground. Waterdept 3 meters"]
-    ];
-       
-    // Loop for the kitespots. //
-        for (var i = 0; i < kitespots.length; i++) {
-            spots = new L.marker([kitespots[i][1],kitespots[i][2]]) 
-                .bindPopup("<b>" + kitespots[i][4] + "</b>" + "<br/>" + ({iconUrl:"https://fontawesome.com/icons/location-arrow?style=solid"}) + kitespots[i][5] + "<br/>" + kitespots[i][6] + "<br/>" + kitespots[i][7] + " " + kitespots[i][8])
-                .addTo(map);
-        }
-    </script>
-            <script src="js/map.js"></script>
-</body>
+
+    var geojson = {
+   "type": "FeatureCollection",
+   "features": [
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               23.611507,
+               65.81085
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               23.488512,
+               65.8134
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {
+            "marker-color": "#7e7e7e",
+            "marker-size": "medium",
+            "marker-symbol": ""
+         },
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               22.023039,
+               65.6225
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {
+            "marker-color": "#7e7e7e",
+            "marker-size": "medium",
+            "marker-symbol": ""
+         },
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               22.154446,
+               65.54607
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               22.152407,
+               65.51925
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               22.366877,
+               65.49921
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               21.184559,
+               64.77449
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               21.21726,
+               64.742615
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               21.545692,
+               64.51869
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               21.611223,
+               64.43493
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               21.58041,
+               64.434296
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               20.02533,
+               63.669872
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               19.99958,
+               63.652355
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               19.477472,
+               63.491413
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               19.264183,
+               63.45757
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               18.959656,
+               63.22064
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               18.827864,
+               63.21493
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               18.815632,
+               63.20795
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               18.68564,
+               63.25065
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               18.528786,
+               62.99013
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               17.971916,
+               62.644855
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               18.032942,
+               62.599426
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               17.912222,
+               62.575943
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               17.925632,
+               62.585743
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               17.53478,
+               62.44946
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               17.483883,
+               62.510494
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               17.474527,
+               62.509663
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               17.50019,
+               62.44942
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               17.458178,
+               62.07771
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               17.422943,
+               62.02656
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               17.415218,
+               62.018066
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               17.397623,
+               61.995796
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               16.8756,
+               61.81523
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               16.71396,
+               61.92114
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               17.176994,
+               61.716724
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               17.432943,
+               61.629654
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               17.445303,
+               61.622513
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               17.466759,
+               61.621616
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               17.509546,
+               61.701065
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               17.176737,
+               61.419434
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               17.152792,
+               61.416744
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               17.194332,
+               61.24681
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               17.259178,
+               61.240845
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               17.275057,
+               61.23601
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               17.352798,
+               60.751842
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               17.318197,
+               60.731937
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               17.262075,
+               60.715588
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               17.443993,
+               60.643803
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               17.47163,
+               60.64057
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               18.992378,
+               59.905285
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               19.065056,
+               59.71725
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               18.98783,
+               59.6266
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               19.59665,
+               60.154278
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               19.544527,
+               60.218056
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               19.945593,
+               60.107773
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               20.141136,
+               60.09007
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               20.252352,
+               60.205807
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               18.130274,
+               59.442303
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               18.10504,
+               59.42598
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               18.111734,
+               59.38979
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               18.230825,
+               59.376263
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               17.891537,
+               59.286907
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               18.3026,
+               59.313072
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               18.264534,
+               59.269268
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               18.356695,
+               59.228218
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               18.416735,
+               59.196373
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               18.480238,
+               59.22269
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               18.524107,
+               59.215412
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               18.537476,
+               59.220592
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               18.54975,
+               59.221527
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               18.398474,
+               59.137558
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               18.32202,
+               59.098766
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               17.791243,
+               58.80143
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               17.791586,
+               58.797203
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               17.809868,
+               58.798893
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               17.111162,
+               58.723824
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               19.22144,
+               57.986717
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               19.24633,
+               57.973614
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               19.304008,
+               57.98617
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               19.33731,
+               57.956585
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               19.26075,
+               57.95194
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               18.893738,
+               57.928547
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               18.94983,
+               57.787216
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               18.91043,
+               57.720768
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               18.878696,
+               57.735935
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               18.80971,
+               57.720196
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               18.602858,
+               57.843197
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               18.332663,
+               57.67357
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               18.30334,
+               57.653076
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               18.211727,
+               57.599808
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               18.76688,
+               57.613922
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               18.854383,
+               57.434834
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               18.898973,
+               57.43696
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               18.917599,
+               57.40322
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               18.881035,
+               57.394665
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               18.867989,
+               57.39864
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               18.854427,
+               57.396606
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               18.797415,
+               57.374146
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               18.780935,
+               57.371475
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               18.715681,
+               57.33558
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               18.666523,
+               57.28353
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               18.430681,
+               57.12394
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               18.341932,
+               57.015553
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               18.372402,
+               56.997044
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               18.27846,
+               56.92903
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               18.236704,
+               57.03266
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               18.217241,
+               57.131336
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               18.166023,
+               57.396305
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               18.155722,
+               57.40558
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               18.141968,
+               57.436924
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               18.126068,
+               57.483635
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               18.127228,
+               57.488983
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               18.113794,
+               57.500862
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               19.007334,
+               57.75678
+            ]
+         }
+      },
+      {
+         "type": "Feature",
+         "properties": {},
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               18.144886,
+               57.43263
+            ]
+         }
+      }
+   ]
+}
+
+L.geoJSON(geojson).addTo(map);
+
+
+
+</script>
+<script src="js/map.js"></script>
+
+
+    </body>
 </html>
