@@ -23,9 +23,12 @@
 <body>
     <div id="map"></div>
     <script>
+        // Step 1. create and load an ArcGIS basemap
+        var map = L.map('map').setView([62.45,17.45], 5);
+        L.esri.basemapLayer('Topographic').addTo(map);
 
         // Geojson made in geojson.io //
-        var kitespots = new L.LayerGroup(); [{
+        var kitespots = new L.FeatureGroup(); [{
             "type": "FeatureCollection",
             "features": [
                 {
@@ -4317,11 +4320,10 @@
             ]
             }];
   
-        // Step 1. create and load an ArcGIS basemap
-        var map = L.map('map').setView([62.45,17.45], 5);
+        /*L.geoJson(kitespots, {
+            onEachFeature: kite
+        }).addTo(map);*/
 
-        L.esri.basemapLayer('Topographic').addTo(map);
- 
             // Step 2. Layer groups to control //
         var basemapLayer = {
             Topographic: L.esri.basemapLayer('Topographic'),
@@ -4336,13 +4338,10 @@
         'Kite Spots': kitespots
         };
 
-        /*L.geoJson(kitespots, {
-            onEachFeature: kite
-        }).addTo(map);*/
-
         // Output of basemaps and layers
         L.control.layers( basemapLayer, overlays).addTo( map );
 
+        
 /*
 var spotIcon = L.icon({
     radius: 8, 
