@@ -24,32 +24,8 @@
     <div id="map"></div>
     <script>
 
-        // Step 1. create and load an ArcGIS basemap
-        var map = L.map('map').setView([62.45,17.45], 5);
-
-        L.esri.basemapLayer('Topographic').addTo(map);
- 
-            // Step 2. Layer groups to control //
-        var basemapLayer = {
-            Topographic: L.esri.basemapLayer('Topographic'),
-            NationalGeographic: L.esri.basemapLayer("NationalGeographic"),
-            Streets: L.esri.basemapLayer("Streets"),
-            ImageryLabels: L.esri.basemapLayer("ImageryLabels")
-            //"Wind": L.esri.basemapLayer("Wind"),
-        }; 
-
-        // Output of basemaps and layers
-        L.control.layers( basemapLayer, overlays).addTo( map );
-
-
-
-        // Overlayers 
-        var overlays = {
-        'Kite Spots': geojsonFeature
-        };
-       
         // Geojson made in geojson.io //
-        var geojsonFeature = {
+        var kitespots = new L.LayerGroup(); [{
             "type": "FeatureCollection",
             "features": [
                 {
@@ -4339,10 +4315,33 @@
                 }
                 }
             ]
-            };
-        
+            }];
+  
+        // Step 1. create and load an ArcGIS basemap
+        var map = L.map('map').setView([62.45,17.45], 5);
 
+        L.esri.basemapLayer('Topographic').addTo(map);
+ 
+            // Step 2. Layer groups to control //
+        var basemapLayer = {
+            Topographic: L.esri.basemapLayer('Topographic'),
+            NationalGeographic: L.esri.basemapLayer("NationalGeographic"),
+            Streets: L.esri.basemapLayer("Streets"),
+            Imagery: L.esri.basemapLayer("Imagery")
+            //"Wind": L.esri.basemapLayer("Wind"),
+        }; 
+            
+        // Overlayers 
+        var overlays = {
+        'Kite Spots': kitespots
+        };
 
+        /*L.geoJson(kitespots, {
+            onEachFeature: kite
+        }).addTo(map);*/
+
+        // Output of basemaps and layers
+        L.control.layers( basemapLayer, overlays).addTo( map );
 
 /*
 var spotIcon = L.icon({
