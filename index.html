@@ -9,6 +9,8 @@
 
     <!-- Load Esri Leaflet from CDN -->
     <script src="https://unpkg.com/esri-leaflet@2.5.0/dist/esri-leaflet.js" integrity="sha512-ucw7Grpc+iEQZa711gcjgMBnmd9qju1CICsRaryvX7HJklK0pGl/prxKvtHwpgm5ZHdvAil7YPxI1oWPOWK3UQ==" crossorigin=""></script>
+    <!-- Reference cluster plug-in and esri feature layer 
+    <script src="lib/markercluster/leaflet.markercluster.js"></script> -->
 
     <title>Document</title>
     <style>
@@ -23,13 +25,12 @@
 <body>
     <div id="map"></div>
     <script>
-        // -1- Create and load an ArcGIS basemap
-        var map = L.map('map').setView([62.45,17.45], 5);
-        L.esri.basemapLayer('Topographic').addTo(map);
 
-        // -2- Add Kitespots to map
-        // Geojson made in geojson.io //
-        var kitespots = [
+        var baseImagery = L.layerGroup();
+        L.esri.basemapLayer('Imagery').addTo(baseImagery);
+
+            // - Geojson data made in geojson.io - //
+        var kitespots = L.layerGroup ([
             {
                 "type": "Feature",
                 "properties": {
@@ -4316,65 +4317,45 @@
                     ]
                 }
                 }
-            ];
-  
-            function onEachFeature(feature, layer) {
-			var popupContent = "<p> "+feature.properties.name + "<br/>" + "Wind Direction: " + feature.properties.windDirection + "</p>";
+            ]);
 
-			if (feature.properties && feature.properties.popupContent) {
+
+            // - Show data; name and wind direction for each spot - // /*
+        function onEachFeature(feature, layer) {
+		var popupContent = "<p><b> "+feature.properties.name + "</b><br/>" + "Wind Direction: " + feature.properties.windDirection + "</p>";
+            if (feature.properties && feature.properties.popupContent) {
 				popupContent += feature.properties.popupContent;
 			}
+		    layer.bindPopup(popupContent);
+        }
+        // L.geoJson(kitespots,{onEachFeature: onEachFeature}).addTo(map);
+ 
+            // - Create and load an ArcGIS basemap - //
+       /* var map = L.map('map').setView([62.45,17.45], 5);
+        L.esri.basemapLayer('Topographic').addTo(map); */
 
-			layer.bindPopup(popupContent);
-		}
-		
-	
-      L.geoJson(kitespots,{onEachFeature: onEachFeature}).addTo(map);
-      
-        /*L.geoJson(kitespots, {
-            onEachFeature: kite
-        }).addTo(map);*/
+        var map = L.map('map', {
+            center: [62.45,17.45],
+            zoom: 5,
+            layers: [baseImagery]
+        });
 
-            // -3- Layer maps to control //
-        var basemapLayer = {
-            Topographic: L.esri.basemapLayer('Topographic'),
+            // - Basemap layers - //
+        var basemapLayers = {
+            Topographic: L.esri.basemapLayer("Topographic"),
             NationalGeographic: L.esri.basemapLayer("NationalGeographic"),
             Streets: L.esri.basemapLayer("Streets"),
             Imagery: L.esri.basemapLayer("Imagery")
             //"Wind": L.esri.basemapLayer("Wind"),
-        }; 
-            
-        // Overlayers 
-        var overlays = {
-        'Kite Spots': kitespots
         };
 
-        
-
-        // Output of basemaps and layers
-        L.control.layers( basemapLayer, overlays).addTo( map );
-
-        
-        
-/*
-var spotIcon = L.icon({
-    radius: 8, 
-    opacity: 1,
-    color: "#000" 
-});
-L.geoJSON(geojson, {
-    pointToLayer: function(geoJsonPoint, latlng) {
-        return L.marker(latlng, {
-            icon: spotIcon
-        });
-    },
-    onEachFeature: function(feature, layer) {
-        if(feature.geometry.type === 'point') {
-        layer.bindPopup("Hello");
-        }
-    }
-}).addTo(map);
-*/
+            // - Overlayers - //
+        var overLays = {
+            "Kite Spots": kitespots
+        };
+ 
+            // - Add it all to the map - //
+        L.control.layers(basemapLayers, overLays).addTo(map);
 
 
 
