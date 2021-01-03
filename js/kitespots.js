@@ -1,4 +1,6 @@
-var kitespots =  [
+var Kitespots = {
+  "type": "FeatureCollection",
+  "features": [
     {
       "type": "Feature",
       "properties": {
@@ -4286,6 +4288,7 @@ var kitespots =  [
       }
     }
   ]
+}
 
 
 /*
