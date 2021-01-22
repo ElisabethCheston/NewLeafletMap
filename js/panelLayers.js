@@ -152,7 +152,7 @@ L.Control.PanelLayers = L.Control.Layers.extend({
 			this._layersActives.push(layerDef.layer);
 
 		this._layers.push(L.Util.extend(layerDef, {
-			collapsed: isCollapsed,
+			//collapsed: isCollapsed,
 			overlay: overlay,
 			group: group
 		}));
@@ -291,7 +291,7 @@ L.Control.PanelLayers = L.Control.Layers.extend({
 			L.DomUtil.addClass(groupdiv, 'collapsible');
 
 			groupexp = L.DomUtil.create('i', this.className + '-icon', grouplabel);
-			if (isCollapsed === true)
+			if (isCollapsed === false)
 				groupexp.innerHTML = ' + ';
 			else
 				groupexp.innerHTML = ' - ';
@@ -307,7 +307,7 @@ L.Control.PanelLayers = L.Control.Layers.extend({
 				self._updateHeight();
 			});
 
-			if (isCollapsed === false)
+			if (isCollapsed === true)
 				L.DomUtil.addClass(groupdiv, 'expanded');
 		}
 

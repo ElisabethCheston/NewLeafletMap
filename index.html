@@ -13,217 +13,28 @@
      <!-- Load Leaflet MarkerCluster and Esri Leaflet Cluster from CDN -->
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" integrity="sha512-BBToHPBStgMiw0lD4AtkRIZmdndhB6aQbXpX7omcrXeG2PauGBl2lzq2xUZTxaLxYz5IDHlmneCZ1IJ+P3kYtQ==" crossorigin="">
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" integrity="sha512-RLEjtaFGdC4iQMJDbMzim/dOvAu+8Qp9sw7QE4wIMYcg2goVoivzwgSZq9CsIxp4xKAZPKh5J2f2lOko2Ze6FQ==" crossorigin="">
+    <link rel="stylesheet" type="text/css" href="css/map.css" />
     <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js" integrity="sha512-MQlyPV+ol2lp4KodaU/Xmrn+txc1TP15pOBF/2Sfre7MRsA/pB4Vy58bEqe9u7a7DczMLtU5wT8n7OblJepKbg==" crossorigin=""></script>
     <script src="https://unpkg.com/esri-leaflet-cluster@2.1.0/dist/esri-leaflet-cluster.js" integrity="sha512-fEdNFHisleVtEYdLhW4Z2RsR7TN6hLutE/+O4D+skfTNY2rlHm8HOZARPWkdrFFy/+i2KjFxcZAKTUWaVfbV0g==" crossorigin=""></script>
     <script src="https://unpkg.com/leaflet.markercluster.layersupport@2.0.1/dist/leaflet.markercluster.layersupport.js"></script>
 
     <title>Document</title>
-    <style>
-        html, body, #map {
-            height: 100%;
-            padding: 0px;
-            margin: 0px;
-        }
 
-        /* MARKERS */
-        .leaflet-marker-icon {
-            padding: 2px;
-            text-align: center;
-        }
-        .marker-kitespots {
-            background: url('images/markers/flag.png') center center no-repeat;
-        }
-
-        /* ICONS */
-      /*  .icon {
-            display: inline-block;
-            margin: 1px;
-            height: 20px;
-            width: 20px;
-            background-color: #ccc;
-        }*/
-        .icon-kitespots {
-            background: url('images/icons/kitesurf.png'), center center no-repeat;
-            display: inline-block;
-            margin: 2px;
-            height: 22px;
-            width: 22px;
-            background-color: #ccc;
-        }
-        .icon-globe {
-            background: url('images/icons/globe.png'), center center no-repeat;
-            display: inline-block;
-            margin: 2px;
-            height: 22px;
-            width: 22px;
-            background-color: #ccc;
-        }
-        .icon-landskap {
-            background: url('images/icons/landskap.png'), center center no-repeat;
-            display: inline-block;
-            margin: 2px;
-            height: 18px;
-            width: 18px;
-            background-color: #ccc;
-        }
-
-        /* Scale */
-        .scaleLayer {
-            color: rgba(248, 255, 248, 0.9);
-        }
-    </style>
 </head>
 <body>
     <div id="map"></div>
    
-    <script src="/js/panelLayers.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="js/panelLayers.js"></script>
         <!--GeoJson data-->
-    <script src="/js/kitespots.js"></script>
+    <script src="json/kitespots.json"></script>
+    <script src="json/weatherStations.json"></script>
+        <!--JavaScript data-->
+    <!--<script src="/js/kitespots.js"></script>
     <script src="/js/landskap.js"></script>
-
-    <script>
-
-            // - Create an on load ArcGIS basemap - //
-        var map = L.map('map', {
-            center: [62.45,17.45],
-            zoom: 5
-        }),
-        baseImagery = L.layerGroup();
-        L.esri.basemapLayer('ImageryClarity').addTo(map);
-
-/*
-         // - Creating a Layer object https://www.tutorialspoint.com/leafletjs/leafletjs_quick_guide.htm - //
-         var scaleLayer = new L.TileLayer('Maps');
-         map.addLayer(scaleLayer); // Adding layer to the map
-         var scale = L.control.scale(); // Creating scale control
-         scale.addTo(map); // Adding scale control to the map
-         */
-
-                    // - Icons for each feature in control layer - //
-        function iconByName(name) {
-            return '<i class="icon icon-kitespots"></i>';
-        }
-            // - Marker icons on map - //       
-        function featureToMarker(feature, latlng) {
-            return L.marker(latlng, {
-                icon: L.icon({
-                    className: 'marker-'+feature.properties.amenity,
-                    html: iconByName(feature.properties.amenity),
-                    iconUrl: '../images/markers/flag.png',
-                    iconSize: [32, 46],
-                    iconAnchor: [12, 41],
-                    popupAnchor: [1, -34],
-                    shadowSize: [41, 41]
-                })
-            });
-        }
-        function onEachFeature(feature, layer) {
-		var popup = "<p><b> "+feature.properties.name + "</b><br/>" + "Wind Direction: " + feature.properties.windDirection + "</p>";
-            if (feature.properties && feature.properties.popupContent) {
-				popupContent += feature.properties.popupContent;
-			}
-		    layer.bindPopup(popup);
-            }
-            // - https://gis.stackexchange.com/questions/375976/clustering-markers-from-geojson-after-adding-data-to-layer-in-leaflet - //
-            // - https://gis.stackexchange.com/questions/152431/leaflet-markerclustergroup-undefined-is-not-a-function - //
-            var clusterGroup = new L.markerClusterGroup();
-            var points = L.geoJson(kitespots, {
-                pointToLayer: function (feature, latlng) {
-                return L.marker(latlng)
-                .bindPopup("<p><b> "+feature.properties.name + "</b><br/>" + "Wind Direction: " + feature.properties.windDirection + "</p>");
-                }
-            });
-
-            clusterGroup.addLayer(points);
-            map.addLayer(clusterGroup);
-
-            // - Controlbox basemap layers - //
-        var basemapLayers = [
-                {
-                group: "Maps",
-                collapsed: true,
-                layers: [
-                    {
-                        name: "Hybrid",
-                        background: 'images/icons/globe.png',
-                        layer: L.esri.basemapLayer("ImageryClarity")
-                    },
-                    {
-                        name: "Topographic",
-                        background: 'images/icons/globe.png',
-                        layer: L.esri.basemapLayer("Topographic")
-                    },
-                    {
-                        name: "Streets",
-                        background: 'images/icons/globe.png',
-                        layer: L.esri.basemapLayer("Streets")
-                    }
-                ]
-            }
-        ];
-
-            // - Controlbox overlayers - //
-        var overLays = [
-            {
-                name: "Kitespots",
-                background: ('images/icons/kitesurf.png'),
-                //markerClusters: markerClusters,
-                layer: L.geoJson(kitespots, {pointToLayer: featureToMarker, onEachFeature})
-            },
-            {
-                name: "Landskap",
-                background: iconByName(landskap),
-                layer: L.polygon(landskap, {color: 'red'})
-            },
-            
-        ];
-                
-            // - Add it all to the map - //
-        var panelLayers = new L.Control.PanelLayers(basemapLayers, overLays, {
-            collapsibleGroups: true,
-            collapsed: true
-        });
-
-                    // - Features and Functions  - //       
-
-        map.addControl(panelLayers);
-
-            // - Show data; name and wind direction for each spot - // 
-/*      function onEachFeature(feature, layer) {
-		var popupContent = "<p><b> "+feature.properties.name + "</b><br/>" + "Wind Direction: " + feature.properties.direction + "</p>";
-            if (feature.properties && feature.properties.popupContent) {
-				popupContent += feature.properties.popupContent;
-			}
-		    layer.bindPopup(popupContent);
-        }
-        var myIcon = L.icon({
-            iconUrl: '/images/markers/kitespots.png',
-            iconSize: [29, 24],
-            iconAnchor: [9, 21],
-            popupAnchor: [0, -14]
-        });
-*/
-                    // - Cluster for markers - //       
-       /* var markerClusters = L.markerClusterGroup(kitespots, {
-            style: function (feature) {
-                return {
-                    color: 'red'
-                };
-            }
-        })
-        markerClusters.addTo(kitespots);
-
-        var cluster = L.esri.clusteredFeatureLayer("kitespots, {
-            cluster: new L.MarkerClusterGroup(),
-             onEachMarker: function(geojson, marker) {
-                marker.bindPopup("<p><b> "+feature.properties.name + 
-                "</b><br/>" + "Wind Direction: " + 
-                feature.properties.windDirection + "</p>")
-            }
-            }).addTo(overlays);
-*/
-</script>
-
+    <script src="/js/weatherstations.js"></script> -->
+    <script src="js/map.js"></script>
 
     </body>
 </html>

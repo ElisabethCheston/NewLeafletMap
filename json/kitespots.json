@@ -1,4 +1,4 @@
-{
+const kitespots = {
   "type": "FeatureCollection",
   "features": [
     {
@@ -8,7 +8,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "BREDVIKEN",
-        "wind direction": "S"
+        "label": "NORTH",
+        "windDirection": "S"
       },
       "geometry": {
         "type": "Point",
@@ -25,7 +26,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "BODÖN",
-        "wind direction": "S/SE"
+        "label": "NORTH",
+        "windDirection": "S/SE"
       },
       "geometry": {
         "type": "Point",
@@ -42,7 +44,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "STORSAND",
-        "wind direction": "SW/W"
+        "label": "NORTH",
+        "windDirection": "SW/W"
       },
       "geometry": {
         "type": "Point",
@@ -59,7 +62,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "LULVIKSBADET",
-        "wind direction": "NW/N"
+        "label": "NORTH",
+        "windDirection": "NW/N"
       },
       "geometry": {
         "type": "Point",
@@ -76,7 +80,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "LULHÄLLAN",
-        "wind direction": "SE/E"
+        "label": "NORTH",
+        "windDirection": "SE/E"
       },
       "geometry": {
         "type": "Point",
@@ -93,7 +98,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "KLUBBVIKEN",
-        "wind direction": "SE/E/NE"
+        "label": "NORTH",
+        "windDirection": "SE/E/NE"
       },
       "geometry": {
         "type": "Point",
@@ -110,7 +116,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "STORSNÄCK",
-        "wind direction": "W/NW/N"
+        "label": "NORTH",
+        "windDirection": "W/NW/N"
       },
       "geometry": {
         "type": "Point",
@@ -127,7 +134,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "SILLSKATAN",
-        "wind direction": "SE/E"
+        "label": "NORTH",
+        "windDirection": "SE/E"
       },
       "geometry": {
         "type": "Point",
@@ -144,7 +152,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "BJURÖKLUBB E",
-        "wind direction": "SW/S/SE/E"
+        "label": "NORTH",
+        "windDirection": "SW/S/SE/E"
       },
       "geometry": {
         "type": "Point",
@@ -161,7 +170,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "BJURÖKLUBB W",
-        "wind direction": "S/SE"
+        "label": "NORTH",
+        "windDirection": "S/SE"
       },
       "geometry": {
         "type": "Point",
@@ -178,7 +188,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "LILLIS",
-        "wind direction": "SE/E"
+        "label": "NORTH",
+        "windDirection": "SE/E"
       },
       "geometry": {
         "type": "Point",
@@ -195,7 +206,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "LÄNKEBOO",
-        "wind direction": "SE/E/NE"
+        "label": "NORTH",
+        "windDirection": "SE/E/NE"
       },
       "geometry": {
         "type": "Point",
@@ -212,7 +224,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "STORÄNGET",
-        "wind direction": "NW"
+        "label": "NORTH",
+        "windDirection": "NW"
       },
       "geometry": {
         "type": "Point",
@@ -229,7 +242,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "SALUSAND",
-        "wind direction": "SE/E"
+        "label": "NORTH",
+        "windDirection": "SE/E"
       },
       "geometry": {
         "type": "Point",
@@ -246,7 +260,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "STUBBSAND",
-        "wind direction": "S/SW"
+        "label": "NORTH",
+        "windDirection": "S/SW"
       },
       "geometry": {
         "type": "Point",
@@ -263,7 +278,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "GULLVIK",
-        "wind direction": "S/SE"
+        "label": "NORTH",
+        "windDirection": "S/SE"
       },
       "geometry": {
         "type": "Point",
@@ -280,7 +296,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "VANNVIKEN",
-        "wind direction": "S/SE"
+        "label": "NORTH",
+        "windDirection": "S/SE"
       },
       "geometry": {
         "type": "Point",
@@ -297,7 +314,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "NYÄNGET",
-        "wind direction": "S/SE"
+        "label": "NORTH",
+        "windDirection": "S/SE"
       },
       "geometry": {
         "type": "Point",
@@ -314,7 +332,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "STORSANDEN",
-        "wind direction": "N/NW"
+        "label": "NORTH",
+        "windDirection": "N/NW"
       },
       "geometry": {
         "type": "Point",
@@ -331,7 +350,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "SÄLSTEN",
-        "wind direction": "NW/NE"
+        "label": "NORTHEAST",
+        "windDirection": "NW/NE"
       },
       "geometry": {
         "type": "Point",
@@ -348,7 +368,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "SMITINGE",
-        "wind direction": "SE/S"
+        "label": "NORTHEAST",
+        "windDirection": "SE/S"
       },
       "geometry": {
         "type": "Point",
@@ -365,7 +386,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "SVARTVIK",
-        "wind direction": "SE"
+        "label": "NORTHEAST",
+        "windDirection": "SE"
       },
       "geometry": {
         "type": "Point",
@@ -382,7 +404,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "YTTERFÄLLE",
-        "wind direction": "SE"
+        "label": "NORTHEAST",
+        "windDirection": "SE"
       },
       "geometry": {
         "type": "Point",
@@ -399,7 +422,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "MYCKELÄNG",
-        "wind direction": "NW/SW/W"
+        "label": "NORTHEAST",
+        "windDirection": "NW/SW/W"
       },
       "geometry": {
         "type": "Point",
@@ -416,7 +440,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "GULLFIBER",
-        "wind direction": "S/SW"
+        "label": "NORTHEAST",
+        "windDirection": "S/SW"
       },
       "geometry": {
         "type": "Point",
@@ -433,7 +458,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "SMACKEN",
-        "wind direction": "S/SW/SE"
+        "label": "NORTHEAST",
+        "windDirection": "S/SW/SE"
       },
       "geometry": {
         "type": "Point",
@@ -450,7 +476,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "STORNÄSET",
-        "wind direction": "S/SW/SE"
+        "label": "NORTHEAST",
+        "windDirection": "S/SW/SE"
       },
       "geometry": {
         "type": "Point",
@@ -467,7 +494,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "DYRÅSAND",
-        "wind direction": "E/SE/NE"
+        "label": "NORTHEAST",
+        "windDirection": "E/SE/NE"
       },
       "geometry": {
         "type": "Point",
@@ -484,7 +512,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "SÖRFJÄRDEN",
-        "wind direction": "E/SE"
+        "label": "NORTHEAST",
+        "windDirection": "E/SE"
       },
       "geometry": {
         "type": "Point",
@@ -501,7 +530,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "VARPSAND",
-        "wind direction": "NE/E"
+        "label": "NORTHEAST",
+        "windDirection": "NE/E"
       },
       "geometry": {
         "type": "Point",
@@ -518,7 +548,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "HÅRTE",
-        "wind direction": "S/SE"
+        "label": "NORTHEAST",
+        "windDirection": "S/SE"
       },
       "geometry": {
         "type": "Point",
@@ -535,7 +566,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "HALLSBO",
-        "wind direction": "NW"
+        "label": "NORTHEAST",
+        "windDirection": "NW"
       },
       "geometry": {
         "type": "Point",
@@ -552,7 +584,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "FÖNEBO",
-        "wind direction": "S/SE"
+        "label": "NORTHEAST",
+        "windDirection": "S/SE"
       },
       "geometry": {
         "type": "Point",
@@ -569,7 +602,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "MALNBADEN",
-        "wind direction": "S/SE"
+        "label": "NORTHEAST",
+        "windDirection": "S/SE"
       },
       "geometry": {
         "type": "Point",
@@ -586,7 +620,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "HÖLICK V",
-        "wind direction": "S/SW/W"
+        "label": "NORTHEAST",
+        "windDirection": "S/SW/W"
       },
       "geometry": {
         "type": "Point",
@@ -603,7 +638,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "HÖLICK S",
-        "wind direction": "SE/S"
+        "label": "NORTHEAST",
+        "windDirection": "SE/S"
       },
       "geometry": {
         "type": "Point",
@@ -620,7 +656,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "TÅNGVIK",
-        "wind direction": "S/SW/SE"
+        "label": "NORTHEAST",
+        "windDirection": "S/SW/SE"
       },
       "geometry": {
         "type": "Point",
@@ -637,7 +674,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "SÖRSUNDET",
-        "wind direction": "N/NW"
+        "label": "NORTHEAST",
+        "windDirection": "N/NW"
       },
       "geometry": {
         "type": "Point",
@@ -654,7 +692,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "SNÄCKEN",
-        "wind direction": "S/SE"
+        "label": "NORTHEAST",
+        "windDirection": "S/SE"
       },
       "geometry": {
         "type": "Point",
@@ -671,7 +710,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "KRÅKNÄS",
-        "wind direction": "S/SE"
+        "label": "NORTHEAST",
+        "windDirection": "S/SE"
       },
       "geometry": {
         "type": "Point",
@@ -688,7 +728,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "STENÖ HAVSBAD",
-        "wind direction": "S/SE"
+        "label": "NORTHEAST",
+        "windDirection": "S/SE"
       },
       "geometry": {
         "type": "Point",
@@ -705,8 +746,9 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "ORSUNNDET",
-        "SW/wind direction/NW": "",
-        "wind direction": "S/SW/W/NW"
+        "SW/windDirection/NW": "",
+        "label": "NORTHEAST",
+        "windDirection": "S/SW/W/NW"
       },
       "geometry": {
         "type": "Point",
@@ -723,7 +765,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "ENSKÄR",
-        "wind direction": "S/SE"
+        "label": "NORTHEAST",
+        "windDirection": "S/SE"
       },
       "geometry": {
         "type": "Point",
@@ -740,7 +783,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "UTVALNÄS UDDE",
-        "wind direction": "S/SE/E"
+        "label": "NORTHEAST",
+        "windDirection": "S/SE/E"
       },
       "geometry": {
         "type": "Point",
@@ -757,7 +801,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "HOLMUDDEN",
-        "wind direction": "S/SE"
+        "label": "NORTHEAST",
+        "windDirection": "S/SE"
       },
       "geometry": {
         "type": "Point",
@@ -774,7 +819,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "BRÄDVIKEN",
-        "wind direction": "S/SE"
+        "label": "NORTHEAST",
+        "windDirection": "S/SE"
       },
       "geometry": {
         "type": "Point",
@@ -791,7 +837,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "KLÄCKEN",
-        "wind direction": "NW/N/NE"
+        "label": "NORTHEAST",
+        "windDirection": "NW/N/NE"
       },
       "geometry": {
         "type": "Point",
@@ -808,7 +855,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "RULLSAND",
-        "wind direction": "NW/N/NE"
+        "label": "NORTHEAST",
+        "windDirection": "NW/N/NE"
       },
       "geometry": {
         "type": "Point",
@@ -825,7 +873,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "SALNÖ",
-        "wind direction": "E/NE"
+        "label": "MIDEAST",
+        "windDirection": "E/NE"
       },
       "geometry": {
         "type": "Point",
@@ -842,7 +891,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "KAPELLSKÄR",
-        "wind direction": "SW/S/SE"
+        "label": "MIDEAST",
+        "windDirection": "SW/S/SE"
       },
       "geometry": {
         "type": "Point",
@@ -859,7 +909,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "BROMSKÄR",
-        "wind direction": "S/SW/SE"
+        "label": "MIDEAST",
+        "windDirection": "S/SW/SE"
       },
       "geometry": {
         "type": "Point",
@@ -876,7 +927,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "DEGERSAND",
-        "wind direction": "S/SE"
+        "label": "ÅLAND",
+        "windDirection": "S/SE"
       },
       "geometry": {
         "type": "Point",
@@ -893,7 +945,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "SANDMO",
-        "wind direction": "SW/W"
+        "label": "ÅLAND",
+        "windDirection": "SW/W"
       },
       "geometry": {
         "type": "Point",
@@ -910,7 +963,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "SKJULET",
-        "wind direction": "SE/E"
+        "label": "ÅLAND",
+        "windDirection": "SE/E"
       },
       "geometry": {
         "type": "Point",
@@ -927,7 +981,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "LUMPARN",
-        "wind direction": "N/NW/NE"
+        "label": "ÅLAND",
+        "windDirection": "N/NW/NE"
       },
       "geometry": {
         "type": "Point",
@@ -944,7 +999,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "PRÄSTÖ",
-        "wind direction": "S/SW/SE"
+        "label": "ÅLAND",
+        "windDirection": "S/SW/SE"
       },
       "geometry": {
         "type": "Point",
@@ -961,7 +1017,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "HÄGERNÄSBADET",
-        "wind direction": "S/SE"
+        "label": "MIDEAST",
+        "windDirection": "S/SE"
       },
       "geometry": {
         "type": "Point",
@@ -978,7 +1035,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "NÄSAÄNG",
-        "wind direction": "SE/E"
+        "label": "MIDEAST",
+        "windDirection": "SE/E"
       },
       "geometry": {
         "type": "Point",
@@ -995,7 +1053,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "STICKLINGE",
-        "wind direction": "NW/W"
+        "label": "MIDEAST",
+        "windDirection": "NW/W"
       },
       "geometry": {
         "type": "Point",
@@ -1012,7 +1071,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "FÅGELÖUDDE",
-        "wind direction": "NE/N"
+        "label": "MIDEAST",
+        "windDirection": "NE/N"
       },
       "geometry": {
         "type": "Point",
@@ -1029,7 +1089,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "SÄTRASTRAND",
-        "wind direction": "W"
+        "label": "MIDEAST",
+        "windDirection": "W"
       },
       "geometry": {
         "type": "Point",
@@ -1046,7 +1107,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "MJÖLKUDDEN",
-        "wind direction": "SE/E/NE"
+        "label": "MIDEAST",
+        "windDirection": "SE/E/NE"
       },
       "geometry": {
         "type": "Point",
@@ -1063,7 +1125,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "ERSTAVIK",
-        "wind direction": "SE"
+        "label": "MIDEAST",
+        "windDirection": "SE"
       },
       "geometry": {
         "type": "Point",
@@ -1080,7 +1143,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "TRINNTORP",
-        "wind direction": "E/NE"
+        "label": "MIDEAST",
+        "windDirection": "E/NE"
       },
       "geometry": {
         "type": "Point",
@@ -1096,8 +1160,9 @@
         "marker-color": "#7e7e7e",
         "marker-size": "medium",
         "marker-symbol": "",
-        "name": "SANDHLMEN",
-        "wind direction": "S/SE"
+        "name": "SANDHOLMEN",
+        "label": "MIDEAST",
+        "windDirection": "S/SE"
       },
       "geometry": {
         "type": "Point",
@@ -1114,7 +1179,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "GRÖNSKAN",
-        "wind direction": "SW/S"
+        "label": "MIDEAST",
+        "windDirection": "SW/S"
       },
       "geometry": {
         "type": "Point",
@@ -1131,7 +1197,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "LILLA SAND",
-        "wind direction": "S/EW/SE"
+        "label": "MIDEAST",
+        "windDirection": "S/EW/SE"
       },
       "geometry": {
         "type": "Point",
@@ -1148,7 +1215,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "BJÖRKVIK",
-        "wind direction": "S/SW/SE"
+        "label": "MIDEAST",
+        "windDirection": "S/SW/SE"
       },
       "geometry": {
         "type": "Point",
@@ -1165,7 +1233,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "TORPESAND",
-        "wind direction": "S/SW/SE"
+        "label": "MIDEAST",
+        "windDirection": "S/SW/SE"
       },
       "geometry": {
         "type": "Point",
@@ -1182,7 +1251,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "DALARÖ",
-        "wind direction": "SW/S"
+        "label": "MIDEAST",
+        "windDirection": "SW/S"
       },
       "geometry": {
         "type": "Point",
@@ -1199,7 +1269,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "GÅLÖ",
-        "wind direction": "E"
+        "label": "MIDEAST",
+        "windDirection": "E"
       },
       "geometry": {
         "type": "Point",
@@ -1216,7 +1287,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "ÖRUDDEN N",
-        "wind direction": "W/NW"
+        "label": "MIDEAST",
+        "windDirection": "W/NW"
       },
       "geometry": {
         "type": "Point",
@@ -1233,7 +1305,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "ÖRUDDEN V",
-        "wind direction": "W/SW/S"
+        "label": "MIDEAST",
+        "windDirection": "W/SW/S"
       },
       "geometry": {
         "type": "Point",
@@ -1250,7 +1323,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "ÖRUDDEN S",
-        "wind direction": "S/SW/SE"
+        "label": "MIDEAST",
+        "windDirection": "S/SW/SE"
       },
       "geometry": {
         "type": "Point",
@@ -1267,7 +1341,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "VARPET",
-        "wind direction": "NE/E"
+        "label": "GOTLAND",
+        "windDirection": "NE/E"
       },
       "geometry": {
         "type": "Point",
@@ -1284,7 +1359,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "EKEVIKEN",
-        "wind direction": "NW/N/NE"
+        "label": "GOTLAND",
+        "windDirection": "NW/N/NE"
       },
       "geometry": {
         "type": "Point",
@@ -1301,7 +1377,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "SKÄR",
-        "wind direction": "NW/N/NE"
+        "label": "GOTLAND",
+        "windDirection": "NW/N/NE"
       },
       "geometry": {
         "type": "Point",
@@ -1318,7 +1395,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "SKALASAND",
-        "wind direction": "SE/E"
+        "label": "GOTLAND",
+        "windDirection": "SE/E"
       },
       "geometry": {
         "type": "Point",
@@ -1335,7 +1413,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "SUDERSAND",
-        "wind direction": "SE/E"
+        "label": "GOTLAND",
+        "windDirection": "SE/E"
       },
       "geometry": {
         "type": "Point",
@@ -1352,7 +1431,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "SAXRIV",
-        "wind direction": "W/NW/N"
+        "label": "GOTLAND",
+        "windDirection": "W/NW/N"
       },
       "geometry": {
         "type": "Point",
@@ -1369,7 +1449,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "SJÖKRGEN",
-        "wind direction": "SE"
+        "label": "GOTLAND",
+        "windDirection": "SE"
       },
       "geometry": {
         "type": "Point",
@@ -1386,7 +1467,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "ST OLOFSHOLM",
-        "wind direction": "SE/E"
+        "label": "GOTLAND",
+        "windDirection": "SE/E"
       },
       "geometry": {
         "type": "Point",
@@ -1403,7 +1485,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "HIDEVIKEN",
-        "wind direction": "S/SE"
+        "label": "GOTLAND",
+        "windDirection": "S/SE"
       },
       "geometry": {
         "type": "Point",
@@ -1420,7 +1503,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "SLITE",
-        "wind direction": "SE/E"
+        "label": "GOTLAND",
+        "windDirection": "SE/E"
       },
       "geometry": {
         "type": "Point",
@@ -1437,7 +1521,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "IREVIKEN",
-        "wind direction": "W/NW"
+        "label": "GOTLAND",
+        "windDirection": "W/NW"
       },
       "geometry": {
         "type": "Point",
@@ -1454,7 +1539,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "NORDENSTRAND",
-        "wind direction": "SW/W/NW"
+        "label": "GOTLAND",
+        "windDirection": "SW/W/NW"
       },
       "geometry": {
         "type": "Point",
@@ -1471,7 +1557,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "VISBY KALLIS",
-        "wind direction": "SW/W/NW"
+        "label": "GOTLAND",
+        "windDirection": "SW/W/NW"
       },
       "geometry": {
         "type": "Point",
@@ -1488,7 +1575,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "FRIDHEM",
-        "wind direction": "SW/W/NW"
+        "label": "GOTLAND",
+        "windDirection": "SW/W/NW"
       },
       "geometry": {
         "type": "Point",
@@ -1505,7 +1593,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "ÅMINNE",
-        "wind direction": "E/NE"
+        "label": "GOTLAND",
+        "windDirection": "E/NE"
       },
       "geometry": {
         "type": "Point",
@@ -1522,7 +1611,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "KATTVIK",
-        "wind direction": "N/NW"
+        "label": "GOTLAND",
+        "windDirection": "N/NW"
       },
       "geometry": {
         "type": "Point",
@@ -1539,7 +1629,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "GROGARN",
-        "wind direction": "E/NE"
+        "label": "GOTLAND",
+        "windDirection": "E/NE"
       },
       "geometry": {
         "type": "Point",
@@ -1556,7 +1647,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "NATVIKSUDD",
-        "wind direction": "SE/E"
+        "label": "GOTLAND",
+        "windDirection": "SE/E"
       },
       "geometry": {
         "type": "Point",
@@ -1573,7 +1665,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "SANDVIKEN",
-        "wind direction": "S/SW"
+        "label": "GOTLAND",
+        "windDirection": "S/SW"
       },
       "geometry": {
         "type": "Point",
@@ -1590,7 +1683,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "VÄSTERVIKEN",
-        "wind direction": "S/SE"
+        "label": "GOTLAND",
+        "windDirection": "S/SE"
       },
       "geometry": {
         "type": "Point",
@@ -1607,7 +1701,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "JRP",
-        "wind direction": "SE/E"
+        "label": "GOTLAND",
+        "windDirection": "SE/E"
       },
       "geometry": {
         "type": "Point",
@@ -1624,7 +1719,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "SJAUSTRU",
-        "wind direction": "SE/E"
+        "label": "GOTLAND",
+        "windDirection": "SE/E"
       },
       "geometry": {
         "type": "Point",
@@ -1641,7 +1737,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "ARDREVIKEN",
-        "wind direction": "SE/E"
+        "label": "GOTLAND",
+        "windDirection": "SE/E"
       },
       "geometry": {
         "type": "Point",
@@ -1658,7 +1755,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "LJUGARN",
-        "wind direction": "SE/E/NE"
+        "label": "GOTLAND",
+        "windDirection": "SE/E/NE"
       },
       "geometry": {
         "type": "Point",
@@ -1675,7 +1773,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "LAUSVIKEN",
-        "wind direction": "W/NW"
+        "label": "GOTLAND",
+        "windDirection": "W/NW"
       },
       "geometry": {
         "type": "Point",
@@ -1692,7 +1791,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "GANSVIKEN",
-        "wind direction": "N/NE"
+        "label": "GOTLAND",
+        "windDirection": "N/NE"
       },
       "geometry": {
         "type": "Point",
@@ -1709,7 +1809,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "FALUDDEN N",
-        "wind direction": "N/NE"
+        "label": "GOTLAND",
+        "windDirection": "N/NE"
       },
       "geometry": {
         "type": "Point",
@@ -1726,7 +1827,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "FALUDDEN S",
-        "wind direction": "S/SE"
+        "label": "GOTLAND",
+        "windDirection": "S/SE"
       },
       "geometry": {
         "type": "Point",
@@ -1743,7 +1845,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "HOLMHÄLLAR",
-        "wind direction": "S/SE/E"
+        "label": "GOTLAND",
+        "windDirection": "S/SE/E"
       },
       "geometry": {
         "type": "Point",
@@ -1760,7 +1863,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "VALAR",
-        "wind direction": "W/NW"
+        "label": "GOTLAND",
+        "windDirection": "W/NW"
       },
       "geometry": {
         "type": "Point",
@@ -1777,7 +1881,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "NISSESVIKEN",
-        "wind direction": "S/SW"
+        "label": "GOTLAND",
+        "windDirection": "S/SW"
       },
       "geometry": {
         "type": "Point",
@@ -1794,7 +1899,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "TJURUDDEN",
-        "wind direction": "SW/W"
+        "label": "GOTLAND",
+        "windDirection": "SW/W"
       },
       "geometry": {
         "type": "Point",
@@ -1811,7 +1917,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "KOVIK",
-        "wind direction": "SW/W"
+        "label": "GOTLAND",
+        "windDirection": "SW/W"
       },
       "geometry": {
         "type": "Point",
@@ -1828,7 +1935,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "VÄSTERGARN N",
-        "wind direction": "SW/W"
+        "label": "GOTLAND",
+        "windDirection": "SW/W"
       },
       "geometry": {
         "type": "Point",
@@ -1845,7 +1953,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "TOFTA S",
-        "wind direction": "SW/W"
+        "label": "GOTLAND",
+        "windDirection": "SW/W"
       },
       "geometry": {
         "type": "Point",
@@ -1862,7 +1971,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "STRANDPANGET",
-        "wind direction": "SW/W"
+        "label": "GOTLAND",
+        "windDirection": "SW/W"
       },
       "geometry": {
         "type": "Point",
@@ -1879,7 +1989,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "GNISVÄRD",
-        "wind direction": "SW/W"
+        "label": "GOTLAND",
+        "windDirection": "SW/W"
       },
       "geometry": {
         "type": "Point",
@@ -1896,7 +2007,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "FURILLEN",
-        "wind direction": "S/SW"
+        "label": "GOTLAND",
+        "windDirection": "S/SW"
       },
       "geometry": {
         "type": "Point",
@@ -1913,7 +2025,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "VÄSTERGARN S",
-        "wind direction": "SW/W"
+        "label": "GOTLAND",
+        "windDirection": "SW/W"
       },
       "geometry": {
         "type": "Point",
@@ -1930,7 +2043,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "HALLMARE",
-        "wind direction": "SW/S"
+        "label": "SOUTHEAST",
+        "windDirection": "SW/S"
       },
       "geometry": {
         "type": "Point",
@@ -1947,7 +2061,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "GRÄNSÖ",
-        "wind direction": "SE/E"
+        "label": "SOUTHEAST",
+        "windDirection": "SE/E"
       },
       "geometry": {
         "type": "Point",
@@ -1964,7 +2079,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "HORNSUDDE",
-        "wind direction": "S/SE"
+        "label": "SOUTHEAST",
+        "windDirection": "S/SE"
       },
       "geometry": {
         "type": "Point",
@@ -1981,7 +2097,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "ÄNGJARN",
-        "wind direction": "S/SE/NE"
+        "label": "ÖLAND",
+        "windDirection": "S/SE/NE"
       },
       "geometry": {
         "type": "Point",
@@ -1998,7 +2115,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "TROLLSKOGEN",
-        "wind direction": "E/NE"
+        "label": "ÖLAND",
+        "windDirection": "E/NE"
       },
       "geometry": {
         "type": "Point",
@@ -2015,7 +2133,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "BÖDA",
-        "wind direction": "E/NE"
+        "label": "ÖLAND",
+        "windDirection": "E/NE"
       },
       "geometry": {
         "type": "Point",
@@ -2032,7 +2151,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "BYRUM",
-        "wind direction": "W/SW/NW"
+        "label": "ÖLAND",
+        "windDirection": "W/SW/NW"
       },
       "geometry": {
         "type": "Point",
@@ -2049,7 +2169,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "HÖGBY",
-        "wind direction": "S/SE"
+        "label": "ÖLAND",
+        "windDirection": "S/SE"
       },
       "geometry": {
         "type": "Point",
@@ -2066,7 +2187,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "ALVEDSJÖ",
-        "wind direction": "S/SW"
+        "label": "ÖLAND",
+        "windDirection": "S/SW"
       },
       "geometry": {
         "type": "Point",
@@ -2083,7 +2205,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "SANDVIK",
-        "wind direction": "SW/S/NW"
+        "label": "ÖLAND",
+        "windDirection": "SW/S/NW"
       },
       "geometry": {
         "type": "Point",
@@ -2100,7 +2223,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "KÅREHAMN",
-        "wind direction": "SE/E/NE"
+        "label": "ÖLAND",
+        "windDirection": "SE/E/NE"
       },
       "geometry": {
         "type": "Point",
@@ -2117,7 +2241,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "ÄLEKLINTA",
-        "wind direction": "SW/W/NW"
+        "label": "ÖLAND",
+        "windDirection": "SW/W/NW"
       },
       "geometry": {
         "type": "Point",
@@ -2134,7 +2259,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "KÖPINGSVIK",
-        "wind direction": "W/NW"
+        "label": "ÖLAND",
+        "windDirection": "W/NW"
       },
       "geometry": {
         "type": "Point",
@@ -2151,7 +2277,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "BJÄRBYBADET",
-        "wind direction": "SE/E/NE"
+        "label": "ÖLAND",
+        "windDirection": "SE/E/NE"
       },
       "geometry": {
         "type": "Point",
@@ -2168,7 +2295,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "BLÄSINGE",
-        "wind direction": "E/NE"
+        "label": "ÖLAND",
+        "windDirection": "E/NE"
       },
       "geometry": {
         "type": "Point",
@@ -2185,7 +2313,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "SAXNÄS",
-        "wind direction": "SW/W/NW"
+        "label": "ÖLAND",
+        "windDirection": "SW/W/NW"
       },
       "geometry": {
         "type": "Point",
@@ -2202,7 +2331,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "TALLUDDEN",
-        "wind direction": "SW/W/NW"
+        "label": "ÖLAND",
+        "windDirection": "SW/W/NW"
       },
       "geometry": {
         "type": "Point",
@@ -2219,7 +2349,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "HAGA PARK",
-        "wind direction": "SW/W/NW"
+        "label": "ÖLAND",
+        "windDirection": "SW/W/NW"
       },
       "geometry": {
         "type": "Point",
@@ -2236,7 +2367,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "SANDBERGEN",
-        "wind direction": "SW/W/NW"
+        "label": "ÖLAND",
+        "windDirection": "SW/W/NW"
       },
       "geometry": {
         "type": "Point",
@@ -2253,7 +2385,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "KLEVA",
-        "wind direction": "SW/W/NW"
+        "label": "ÖLAND",
+        "windDirection": "SW/W/NW"
       },
       "geometry": {
         "type": "Point",
@@ -2270,7 +2403,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "GRÖNHÖGEN",
-        "wind direction": "SW/W/NW"
+        "label": "ÖLAND",
+        "windDirection": "SW/W/NW"
       },
       "geometry": {
         "type": "Point",
@@ -2287,7 +2421,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "BERGAVIKEN",
-        "wind direction": "E"
+        "label": "SOUTHEAST",
+        "windDirection": "E"
       },
       "geometry": {
         "type": "Point",
@@ -2304,7 +2439,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "LÅNGVIKEN",
-        "wind direction": "SE/E"
+        "label": "SOUTHEAST",
+        "windDirection": "SE/E"
       },
       "geometry": {
         "type": "Point",
@@ -2321,8 +2457,9 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "BERGKVARA UDDE",
-        "wind directioon": "",
-        "wind direction": "SE/E"
+        "windDirectioon": "",
+        "label": "SOUTHEAST",
+        "windDirection": "SE/E"
       },
       "geometry": {
         "type": "Point",
@@ -2339,7 +2476,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "SKÄPPEVIK",
-        "wind direction": "NE"
+        "label": "SOUTHEAST",
+        "windDirection": "NE"
       },
       "geometry": {
         "type": "Point",
@@ -2356,7 +2494,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "KRISTIANOPEL",
-        "wind direction": "SE/E"
+        "label": "SOUTHEAST",
+        "windDirection": "SE/E"
       },
       "geometry": {
         "type": "Point",
@@ -2373,7 +2512,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "TORHAMN",
-        "wind direction": "SW"
+        "label": "SOUTHEAST",
+        "windDirection": "SW"
       },
       "geometry": {
         "type": "Point",
@@ -2390,7 +2530,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "GISSELVIK",
-        "wind direction": "S/SW"
+        "label": "SOUTHEAST",
+        "windDirection": "S/SW"
       },
       "geometry": {
         "type": "Point",
@@ -2407,7 +2548,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "STUMHOLMEN",
-        "wind direction": "S/SE"
+        "label": "SOUTHEAST",
+        "windDirection": "S/SE"
       },
       "geometry": {
         "type": "Point",
@@ -2424,7 +2566,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "LINDÖ",
-        "wind direction": "SW/S/SE"
+        "label": "SOUTHEAST",
+        "windDirection": "SW/S/SE"
       },
       "geometry": {
         "type": "Point",
@@ -2441,7 +2584,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "NABBEN",
-        "wind direction": "SW/S"
+        "label": "SOUTH",
+        "windDirection": "SW/S"
       },
       "geometry": {
         "type": "Point",
@@ -2458,7 +2602,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "NORJE",
-        "wind direction": "N/NE"
+        "label": "SOUTH",
+        "windDirection": "N/NE"
       },
       "geometry": {
         "type": "Point",
@@ -2475,7 +2620,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "NOGERSUND",
-        "wind direction": "SE/E"
+        "label": "SOUTH",
+        "windDirection": "SE/E"
       },
       "geometry": {
         "type": "Point",
@@ -2492,7 +2638,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "TORSÖ",
-        "wind direction": "S/SW"
+        "label": "SOUTH",
+        "windDirection": "S/SW"
       },
       "geometry": {
         "type": "Point",
@@ -2509,7 +2656,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "SANDVIKEN",
-        "wind direction": "S/SW"
+        "label": "SOUTH",
+        "windDirection": "S/SW"
       },
       "geometry": {
         "type": "Point",
@@ -2526,7 +2674,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "RINKABY",
-        "wind direction": "SE/E"
+        "label": "SOUTH",
+        "windDirection": "SE/E"
       },
       "geometry": {
         "type": "Point",
@@ -2543,7 +2692,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "ÅHUS ÅWC",
-        "wind direction": "SE/E"
+        "label": "SOUTH",
+        "windDirection": "SE/E"
       },
       "geometry": {
         "type": "Point",
@@ -2560,7 +2710,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "ÄSPET",
-        "wind direction": "S/SE"
+        "label": "SOUTH",
+        "windDirection": "S/SE"
       },
       "geometry": {
         "type": "Point",
@@ -2577,7 +2728,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "VIK",
-        "wind direction": "E/NE"
+        "label": "SOUTH",
+        "windDirection": "E/NE"
       },
       "geometry": {
         "type": "Point",
@@ -2594,7 +2746,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "VITEMÖLLA",
-        "wind direction": "SE/E/NE"
+        "label": "SOUTH",
+        "windDirection": "SE/E/NE"
       },
       "geometry": {
         "type": "Point",
@@ -2611,7 +2764,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "BORRBY",
-        "wind direction": "SE/E"
+        "label": "SOUTH",
+        "windDirection": "SE/E"
       },
       "geometry": {
         "type": "Point",
@@ -2628,7 +2782,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "LÖDERUP",
-        "wind direction": "SW/S/SE"
+        "label": "SOUTH",
+        "windDirection": "SW/S/SE"
       },
       "geometry": {
         "type": "Point",
@@ -2645,7 +2800,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "SANDHAM",
-        "wind direction": "S/SE/E"
+        "label": "SOUTH",
+        "windDirection": "S/SE/E"
       },
       "geometry": {
         "type": "Point",
@@ -2662,7 +2818,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "KÅSEBERGA",
-        "wind direction": "S/SE"
+        "label": "SOUTH",
+        "windDirection": "S/SE"
       },
       "geometry": {
         "type": "Point",
@@ -2679,7 +2836,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "SALTAN",
-        "wind direction": "S/SE/E"
+        "label": "SOUTH",
+        "windDirection": "S/SE/E"
       },
       "geometry": {
         "type": "Point",
@@ -2696,7 +2854,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "YSTAD YWC",
-        "wind direction": "SW/S"
+        "label": "SOUTH",
+        "windDirection": "SW/S"
       },
       "geometry": {
         "type": "Point",
@@ -2713,7 +2872,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "MOSSBYSTRAND",
-        "wind direction": "S/SE"
+        "label": "SOUTH",
+        "windDirection": "S/SE"
       },
       "geometry": {
         "type": "Point",
@@ -2730,7 +2890,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "FRANKS UDDE",
-        "wind direction": "SW/S/SE"
+        "label": "SOUTH",
+        "windDirection": "SW/S/SE"
       },
       "geometry": {
         "type": "Point",
@@ -2747,7 +2908,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "BEDDINGE",
-        "wind direction": "S/SE"
+        "label": "SOUTH",
+        "windDirection": "S/SE"
       },
       "geometry": {
         "type": "Point",
@@ -2764,7 +2926,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "BÖSTE",
-        "wind direction": "SW/S/SE"
+        "label": "SOUTH",
+        "windDirection": "SW/S/SE"
       },
       "geometry": {
         "type": "Point",
@@ -2781,7 +2944,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "KÄMINGE",
-        "wind direction": "SW/S/SE/E"
+        "label": "SOUTH",
+        "windDirection": "SW/S/SE/E"
       },
       "geometry": {
         "type": "Point",
@@ -2798,7 +2962,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "LJUNGHUSEN",
-        "wind direction": "SE/E"
+        "label": "SOUTH",
+        "windDirection": "SE/E"
       },
       "geometry": {
         "type": "Point",
@@ -2815,7 +2980,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "HÖLLVIKEN",
-        "wind direction": "W/NW"
+        "label": "SOUTH",
+        "windDirection": "W/NW"
       },
       "geometry": {
         "type": "Point",
@@ -2832,7 +2998,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "FALSTERBO",
-        "wind direction": "S/SE/E"
+        "label": "SOUTH",
+        "windDirection": "S/SE/E"
       },
       "geometry": {
         "type": "Point",
@@ -2849,7 +3016,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "SKANÖR SÖDRA",
-        "wind direction": "S/SW/W"
+        "label": "SOUTH",
+        "windDirection": "S/SW/W"
       },
       "geometry": {
         "type": "Point",
@@ -2866,7 +3034,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "KLAGSHAMN",
-        "wind direction": "SW/S"
+        "label": "SOUTH",
+        "windDirection": "SW/S"
       },
       "geometry": {
         "type": "Point",
@@ -2883,7 +3052,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "RIBERSBRG",
-        "wind direction": "W/NW"
+        "label": "SOUTH",
+        "windDirection": "W/NW"
       },
       "geometry": {
         "type": "Point",
@@ -2900,7 +3070,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "VÄSTRA HAMNEN",
-        "wind direction": "SW/W/NW"
+        "label": "SOUTH",
+        "windDirection": "SW/W/NW"
       },
       "geometry": {
         "type": "Point",
@@ -2917,7 +3088,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "LOMMA",
-        "wind direction": "SW/W/NW"
+        "label": "SOUTH",
+        "windDirection": "SW/W/NW"
       },
       "geometry": {
         "type": "Point",
@@ -2934,7 +3106,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "HL KITE BEACH",
-        "wind direction": "S/SW/W"
+        "label": "SOUTH",
+        "windDirection": "S/SW/W"
       },
       "geometry": {
         "type": "Point",
@@ -2951,7 +3124,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "SAXTORP",
-        "wind direction": "SW/W/NW"
+        "label": "SOUTH",
+        "windDirection": "SW/W/NW"
       },
       "geometry": {
         "type": "Point",
@@ -2968,7 +3142,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "LUNDÅKRA",
-        "wind direction": "E/S/SW"
+        "label": "SOUTH",
+        "windDirection": "E/S/SW"
       },
       "geometry": {
         "type": "Point",
@@ -2985,7 +3160,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "BORSTAHUSEN",
-        "wind direction": "S/SW/NW"
+        "label": "SOUTH",
+        "windDirection": "S/SW/NW"
       },
       "geometry": {
         "type": "Point",
@@ -3002,7 +3178,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "FORTUNA",
-        "wind direction": "S/SW/NW"
+        "label": "SOUTH",
+        "windDirection": "S/SW/NW"
       },
       "geometry": {
         "type": "Point",
@@ -3019,7 +3196,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "RÅÅ HAMN",
-        "wind direction": "S/SW"
+        "label": "SOUTH",
+        "windDirection": "S/SW"
       },
       "geometry": {
         "type": "Point",
@@ -3036,7 +3214,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "DOMSTEN",
-        "wind direction": "SW/W/MW"
+        "label": "SOUTHWEST",
+        "windDirection": "SW/W/MW"
       },
       "geometry": {
         "type": "Point",
@@ -3053,7 +3232,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "HÖGANÄS",
-        "wind direction": "SW/W/NW"
+        "label": "SOUTHWEST",
+        "windDirection": "SW/W/NW"
       },
       "geometry": {
         "type": "Point",
@@ -3070,7 +3250,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "LERHAMN",
-        "wind direction": "SW/W/NW"
+        "label": "SOUTHWEST",
+        "windDirection": "SW/W/NW"
       },
       "geometry": {
         "type": "Point",
@@ -3087,7 +3268,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "FARHULT",
-        "wind direction": "NW/N"
+        "label": "SOUTHWEST",
+        "windDirection": "NW/N"
       },
       "geometry": {
         "type": "Point",
@@ -3104,7 +3286,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "KLITTERHUS",
-        "wind direction": "SW/W/NW"
+        "label": "SOUTHWEST",
+        "windDirection": "SW/W/NW"
       },
       "geometry": {
         "type": "Point",
@@ -3121,7 +3304,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "VEJBYSTRAND S",
-        "wind direction": "W/NW"
+        "label": "SOUTHWEST",
+        "windDirection": "W/NW"
       },
       "geometry": {
         "type": "Point",
@@ -3138,7 +3322,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "MALENS HAVSBAD",
-        "wind direction": "W/NW"
+        "label": "SOUTHWEST",
+        "windDirection": "W/NW"
       },
       "geometry": {
         "type": "Point",
@@ -3155,7 +3340,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "MELLBY S",
-        "wind direction": "W/NW"
+        "label": "SOUTHWEST",
+        "windDirection": "W/NW"
       },
       "geometry": {
         "type": "Point",
@@ -3172,7 +3358,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "MELLBY N",
-        "wind direction": "W/NW"
+        "label": "SOUTHWEST",
+        "windDirection": "W/NW"
       },
       "geometry": {
         "type": "Point",
@@ -3189,7 +3376,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "LAGAOSET",
-        "wind direction": "SW/W/NW"
+        "label": "SOUTHWEST",
+        "windDirection": "SW/W/NW"
       },
       "geometry": {
         "type": "Point",
@@ -3206,7 +3394,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "HALMSTAD E",
-        "wind direction": "SW/W"
+        "label": "SOUTHWEST",
+        "windDirection": "SW/W"
       },
       "geometry": {
         "type": "Point",
@@ -3223,7 +3412,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "DOGSHIT BAY",
-        "wind direction": "S/SW"
+        "label": "SOUTHWEST",
+        "windDirection": "S/SW"
       },
       "geometry": {
         "type": "Point",
@@ -3240,7 +3430,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "RINGENÄS",
-        "wind direction": "S/SW/W"
+        "label": "SOUTHWEST",
+        "windDirection": "S/SW/W"
       },
       "geometry": {
         "type": "Point",
@@ -3257,7 +3448,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name ": "VILSHÄRAD",
-        "wind direction": "W/NW"
+        "label": "SOUTHWEST",
+        "windDirection": "W/NW"
       },
       "geometry": {
         "type": "Point",
@@ -3274,7 +3466,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "RINGSEGÅRD",
-        "wind direction": "SW/W/NW"
+        "label": "SOUTHWEST",
+        "windDirection": "SW/W/NW"
       },
       "geometry": {
         "type": "Point",
@@ -3291,7 +3484,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "SKREA",
-        "wind direction": "SW/W"
+        "label": "SOUTHWEST",
+        "windDirection": "SW/W"
       },
       "geometry": {
         "type": "Point",
@@ -3308,7 +3502,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "OLOFSBO",
-        "wind direction": "S/SW/W"
+        "label": "SOUTHWEST",
+        "windDirection": "S/SW/W"
       },
       "geometry": {
         "type": "Point",
@@ -3325,7 +3520,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "BJÖRKÄNG",
-        "wind direction": "SW/W/NW"
+        "label": "SOUTHWEST",
+        "windDirection": "SW/W/NW"
       },
       "geometry": {
         "type": "Point",
@@ -3342,7 +3538,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "LÄJET",
-        "wind direction": "SW/W/NW"
+        "label": "SOUTHWEST",
+        "windDirection": "SW/W/NW"
       },
       "geometry": {
         "type": "Point",
@@ -3359,7 +3556,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "APELVIKEN",
-        "wind direction": "SW/W/NW"
+        "label": "SOUTHWEST",
+        "windDirection": "SW/W/NW"
       },
       "geometry": {
         "type": "Point",
@@ -3376,7 +3574,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "GETTERÖN N",
-        "wind direction": "W/NW/N"
+        "label": "SOUTHWEST",
+        "windDirection": "W/NW/N"
       },
       "geometry": {
         "type": "Point",
@@ -3393,7 +3592,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "GETTERÖN S",
-        "wind direction": "SE/S/SW"
+        "label": "SOUTHWEST",
+        "windDirection": "SE/S/SW"
       },
       "geometry": {
         "type": "Point",
@@ -3410,7 +3610,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "NORRA NÄS",
-        "wind direction": "SW/W/NW"
+        "label": "SOUTHWEST",
+        "windDirection": "SW/W/NW"
       },
       "geometry": {
         "type": "Point",
@@ -3427,7 +3628,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "KÄRRADAL",
-        "wind direction": "SW/W/NW"
+        "label": "SOUTHWEST",
+        "windDirection": "SW/W/NW"
       },
       "geometry": {
         "type": "Point",
@@ -3444,7 +3646,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "RINGHALS",
-        "wind direction": "SW/W"
+        "label": "SOUTHWEST",
+        "windDirection": "SW/W"
       },
       "geometry": {
         "type": "Point",
@@ -3461,7 +3664,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "STRÅVALLA",
-        "wind direction": "SW/W/NW"
+        "label": "SOUTHWEST",
+        "windDirection": "SW/W/NW"
       },
       "geometry": {
         "type": "Point",
@@ -3478,7 +3682,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "RÅGELUND",
-        "wind direction": "SW/W"
+        "label": "SOUTHWEST",
+        "windDirection": "SW/W"
       },
       "geometry": {
         "type": "Point",
@@ -3495,7 +3700,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "RÖDA HOLMEN",
-        "wind direction": "S/SW"
+        "label": "SOUTHWEST",
+        "windDirection": "S/SW"
       },
       "geometry": {
         "type": "Point",
@@ -3512,7 +3718,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "GOTTKÄR",
-        "wind direction": "N/NE/E"
+        "label": "SOUTHWEST",
+        "windDirection": "N/NE/E"
       },
       "geometry": {
         "type": "Point",
@@ -3529,7 +3736,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "STENUDDEN",
-        "wind direction": "SE/S/SW"
+        "label": "SOUTHWEST",
+        "windDirection": "SE/S/SW"
       },
       "geometry": {
         "type": "Point",
@@ -3546,7 +3754,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "TORKELSTORP",
-        "wind direction": "S/SW/W"
+        "label": "SOUTHWEST",
+        "windDirection": "S/SW/W"
       },
       "geometry": {
         "type": "Point",
@@ -3563,7 +3772,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "ASKIMBADET",
-        "wind direction": "S/SW/W"
+        "label": "NORTHWEST",
+        "windDirection": "S/SW/W"
       },
       "geometry": {
         "type": "Point",
@@ -3580,7 +3790,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "ARENDAL",
-        "wind direction": "S/SW/W"
+        "label": "NORTHWEST",
+        "windDirection": "S/SW/W"
       },
       "geometry": {
         "type": "Point",
@@ -3597,7 +3808,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "LAPPESAND",
-        "wind direction": "SW/W"
+        "label": "NORTHWEST",
+        "windDirection": "SW/W"
       },
       "geometry": {
         "type": "Point",
@@ -3614,7 +3826,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "HUMMERVIKEN",
-        "wind direction": "SW/W/NW"
+        "label": "NORTHWEST",
+        "windDirection": "SW/W/NW"
       },
       "geometry": {
         "type": "Point",
@@ -3631,7 +3844,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "SILLVIK",
-        "wind direction": "SW/W/NW"
+        "label": "NORTHWEST",
+        "windDirection": "SW/W/NW"
       },
       "geometry": {
         "type": "Point",
@@ -3648,7 +3862,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "BJÖRKLANDA",
-        "wind direction": "SW/W/NW"
+        "label": "NORTHWEST",
+        "windDirection": "SW/W/NW"
       },
       "geometry": {
         "type": "Point",
@@ -3665,7 +3880,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "GLÖSKÄR",
-        "wind direction": "S/SW"
+        "label": "NORTHWEST",
+        "windDirection": "S/SW"
       },
       "geometry": {
         "type": "Point",
@@ -3682,7 +3898,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "LYCKE",
-        "wind direction": "SW/W"
+        "label": "NORTHWEST",
+        "windDirection": "SW/W"
       },
       "geometry": {
         "type": "Point",
@@ -3699,7 +3916,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "TJUVKIL",
-        "wind direction": "W/NW/N"
+        "label": "NORTHWEST",
+        "windDirection": "W/NW/N"
       },
       "geometry": {
         "type": "Point",
@@ -3716,7 +3934,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "ARÖD",
-        "wind direction": "S/SW/W"
+        "label": "NORTHWEST",
+        "windDirection": "S/SW/W"
       },
       "geometry": {
         "type": "Point",
@@ -3733,7 +3952,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "TRLLENÄS",
-        "wind direction": "SW/W"
+        "label": "NORTHWEST",
+        "windDirection": "SW/W"
       },
       "geometry": {
         "type": "Point",
@@ -3750,7 +3970,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "TRÄTTE",
-        "wind direction": "E/SE/S"
+        "label": "NORTHWEST",
+        "windDirection": "E/SE/S"
       },
       "geometry": {
         "type": "Point",
@@ -3767,7 +3988,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "GRENGÅRD",
-        "wind direction": "E/SE/S"
+        "label": "NORTHWEST",
+        "windDirection": "E/SE/S"
       },
       "geometry": {
         "type": "Point",
@@ -3784,7 +4006,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "LAGMANSHOLMEN",
-        "wind direction": "S/SW/W"
+        "label": "NORTHWEST",
+        "windDirection": "S/SW/W"
       },
       "geometry": {
         "type": "Point",
@@ -3801,7 +4024,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "SOLLID",
-        "wind direction": "SW/W"
+        "label": "NORTHWEST",
+        "windDirection": "SW/W"
       },
       "geometry": {
         "type": "Point",
@@ -3818,7 +4042,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "FISKEBÄCKSVIK",
-        "wind direction": "SW/W"
+        "label": "NORTHWEST",
+        "windDirection": "SW/W"
       },
       "geometry": {
         "type": "Point",
@@ -3835,7 +4060,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "HABYBUKTEN",
-        "wind direction": "SW/W"
+        "label": "NORTHWEST",
+        "windDirection": "SW/W"
       },
       "geometry": {
         "type": "Point",
@@ -3852,7 +4078,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "BOVALLSTRAND",
-        "wind direction": "SW/W"
+        "label": "NORTHWEST",
+        "windDirection": "SW/W"
       },
       "geometry": {
         "type": "Point",
@@ -3869,7 +4096,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "SKEPPSTAD",
-        "wind direction": "SW/W"
+        "label": "NORTHWEST",
+        "windDirection": "SW/W"
       },
       "geometry": {
         "type": "Point",
@@ -3886,7 +4114,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "RAFTÖTÅNGEN N",
-        "wind direction": "NW/N/NE"
+        "label": "NORTHWEST",
+        "windDirection": "NW/N/NE"
       },
       "geometry": {
         "type": "Point",
@@ -3902,8 +4131,9 @@
         "marker-color": "#7e7e7e",
         "marker-size": "medium",
         "marker-symbol": "",
-        "name": "RSSÖ KITE",
-        "wind direction": "S//S/SW"
+        "name": "ROSSÖ KITE",
+        "label": "NORTHWEST",
+        "windDirection": "S//S/SW"
       },
       "geometry": {
         "type": "Point",
@@ -3920,7 +4150,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "ROSSÖ",
-        "wind direction": "W/NW"
+        "label": "NORTHWEST",
+        "windDirection": "W/NW"
       },
       "geometry": {
         "type": "Point",
@@ -3937,7 +4168,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "STENVIK",
-        "wind direction": "SE/S"
+        "label": "NORTHWEST",
+        "windDirection": "SE/S"
       },
       "geometry": {
         "type": "Point",
@@ -3954,7 +4186,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "ÖREKROKEN",
-        "wind direction": "SW/W"
+        "label": "NORTHWEST",
+        "windDirection": "SW/W"
       },
       "geometry": {
         "type": "Point",
@@ -3970,8 +4203,9 @@
         "marker-color": "#7e7e7e",
         "marker-size": "medium",
         "marker-symbol": "",
-        "name": "RINGsHAUG",
-        "wind direction": "E/SE"
+        "name": "RINGSHAUG",
+        "label": "NORTHWEST",
+        "windDirection": "E/SE"
       },
       "geometry": {
         "type": "Point",
@@ -3988,7 +4222,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "LARKOLLEN",
-        "wind direction": "SE/S/SW"
+        "label": "NORTHWEST",
+        "windDirection": "SE/S/SW"
       },
       "geometry": {
         "type": "Point",
@@ -4005,7 +4240,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "FRAMNES",
-        "wind direction": "E/SE/S"
+        "label": "NORTHWEST",
+        "windDirection": "E/SE/S"
       },
       "geometry": {
         "type": "Point",
@@ -4022,7 +4258,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "REFSNES",
-        "wind direction": "SW/W/NW"
+        "label": "NORTHWEST",
+        "windDirection": "SW/W/NW"
       },
       "geometry": {
         "type": "Point",
@@ -4039,7 +4276,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "VÄNERSNÄS",
-        "wind direction": "N/NE"
+        "label": "VÄNERN",
+        "windDirection": "N/NE"
       },
       "geometry": {
         "type": "Point",
@@ -4056,7 +4294,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "SIKHALL",
-        "wind direction": "SE/S/SW"
+        "label": "VÄNERN",
+        "windDirection": "SE/S/SW"
       },
       "geometry": {
         "type": "Point",
@@ -4073,7 +4312,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "VITA SANDAR",
-        "wind direction": "NE/E/SE"
+        "label": "VÄNERN",
+        "windDirection": "NE/E/SE"
       },
       "geometry": {
         "type": "Point",
@@ -4090,7 +4330,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "SVALNÄS",
-        "wind direction": "SW/W/NW"
+        "label": "VÄNERN",
+        "windDirection": "SW/W/NW"
       },
       "geometry": {
         "type": "Point",
@@ -4107,7 +4348,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "SVANVIK",
-        "wind direction": "NW/N/NE"
+        "label": "VÄNERN",
+        "windDirection": "NW/N/NE"
       },
       "geometry": {
         "type": "Point",
@@ -4124,7 +4366,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "BJÖRNRUKAN",
-        "wind direction": "SE/S/SW"
+        "label": "VÄNERN",
+        "windDirection": "SE/S/SW"
       },
       "geometry": {
         "type": "Point",
@@ -4141,7 +4384,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "BOMSTAD",
-        "wind direction": "SE/S/SW"
+        "label": "VÄNERN",
+        "windDirection": "SE/S/SW"
       },
       "geometry": {
         "type": "Point",
@@ -4158,7 +4402,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "BREDSANDEN",
-        "wind direction": "NE/E/SE"
+        "label": "VÄNERN",
+        "windDirection": "NE/E/SE"
       },
       "geometry": {
         "type": "Point",
@@ -4175,7 +4420,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "VÄTTERSTRAND",
-        "wind direction": "NE/N/NW"
+        "label": "VÄTTERN",
+        "windDirection": "NE/N/NW"
       },
       "geometry": {
         "type": "Point",
@@ -4192,7 +4438,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "NORDVIKEN",
-        "wind direction": "NE/E/SE"
+        "label": "VÄTTERN",
+        "windDirection": "NE/E/SE"
       },
       "geometry": {
         "type": "Point",
@@ -4209,7 +4456,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "VÄTTERVIK",
-        "wind direction": "W/NW/N"
+        "label": "VÄTTERN",
+        "windDirection": "W/NW/N"
       },
       "geometry": {
         "type": "Point",
@@ -4226,7 +4474,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "VARAMON",
-        "wind direction": "W/NW"
+        "label": "VÄTTERN",
+        "windDirection": "W/NW"
       },
       "geometry": {
         "type": "Point",
@@ -4243,7 +4492,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "MARICON",
-        "wind direction": "S/SW/W"
+        "label": "VÄTTERN",
+        "windDirection": "S/SW/W"
       },
       "geometry": {
         "type": "Point",
@@ -4260,7 +4510,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "ÄSPENÄSET",
-        "wind direction": "SE/E"
+        "label": "VÄTTERN",
+        "windDirection": "SE/E"
       },
       "geometry": {
         "type": "Point",
@@ -4277,7 +4528,8 @@
         "marker-size": "medium",
         "marker-symbol": "",
         "name": "HARGEBADEN",
-        "wind direction": "S/SW"
+        "label": "VÄTTERN",
+        "windDirection": "S/SW"
       },
       "geometry": {
         "type": "Point",

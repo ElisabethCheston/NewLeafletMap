@@ -1,3 +1,4 @@
+/*
 var kitespots = {
   "type": "FeatureCollection",
   "features": [
